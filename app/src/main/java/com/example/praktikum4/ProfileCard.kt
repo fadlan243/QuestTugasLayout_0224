@@ -33,16 +33,24 @@ fun ProfileCard(
     nameColor: Color,
     addressColor: Color,
     modifier: Modifier = Modifier,
+    @StringRes phone: Int? = null,
+    phoneColor: Color = Color.Unspecified,
+    nameFontFamily: FontFamily? = null,
+    nameFontStyle: FontStyle? = null,
+    nameFontWeight: FontWeight = FontWeight.Bold
+) {
  {
-    Card(
-        modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner)),
-        colors = CardDefaults.cardColors(containerColor = containerColor)
-    ) {
-        Row(
-            modifier = Modifier.padding(dimensionResource(R.dimen.card_padding)),
-            verticalAlignment = Alignment.CenterVertically
-        )
+            Image(
+                painter = painterResource(R.drawable.logo_umy),
+                contentDescription = stringResource(R.string.cd_logo_umy),
+                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+            )
+
+            Image(
+                painter = painterResource(R.drawable.logo_umy),
+                contentDescription = stringResource(R.string.cd_logo_umy),
+                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+            )
         }
     }
 }
