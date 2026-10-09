@@ -39,7 +39,27 @@ fun ProfileCard(
     nameFontStyle: FontStyle? = null,
     nameFontWeight: FontWeight = FontWeight.Bold
 ) {
- {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner)),
+        colors = CardDefaults.cardColors(containerColor = containerColor)
+    ) {
+        Row(
+            modifier = Modifier.padding(dimensionResource(R.dimen.card_padding)),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(R.drawable.logo_umy),
+                contentDescription = stringResource(R.string.cd_logo_umy),
+                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+            )
+
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = dimensionResource(R.dimen.text_gap_horizontal)),
+                verticalArrangement = Arrangement.Center
+            ) {
                 Text(
                     text = stringResource(name),
                     color = nameColor,
@@ -49,6 +69,28 @@ fun ProfileCard(
                     fontStyle = nameFontStyle
                 )
 
+                if (phone != null) {
+                    Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
+                    Text(
+                        text = stringResource(phone),
+                        color = phoneColor,
+                        fontSize = spResource(R.dimen.detail_size)
+                    )
+                }
+
+                Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
+                Text(
+                    text = stringResource(address),
+                    color = addressColor,
+                    fontSize = spResource(R.dimen.detail_size)
+                )
+            }
+
+            Image(
+                painter = painterResource(R.drawable.logo_umy),
+                contentDescription = stringResource(R.string.cd_logo_umy),
+                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+            )
         }
     }
 }
