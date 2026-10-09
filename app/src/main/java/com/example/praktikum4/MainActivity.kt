@@ -90,6 +90,18 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 addressColor = colorResource(R.color.text_yellow)
             )
 
+            // Kartu 3 – biru
+            ProfileCard(
+                name = R.string.name_zhilal,
+                phone = R.string.phone_zhilal,
+                address = R.string.address_zhilal,
+                containerColor = colorResource(R.color.card_blue),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_white)
+            )
+
+
     }
 }
 
