@@ -40,30 +40,15 @@ fun ProfileCard(
     nameFontWeight: FontWeight = FontWeight.Bold
 ) {
 
+                if (phone != null) {
+                    Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
+                    Text(
+                        text = stringResource(phone),
+                        color = phoneColor,
+                        fontSize = spResource(R.dimen.detail_size)
+                    )
+                }
 
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(horizontal = dimensionResource(R.dimen.text_gap_horizontal)),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(
-                    text = stringResource(name),
-                    color = nameColor,
-                    fontSize = spResource(R.dimen.name_size),
-                    fontWeight = nameFontWeight,
-                    fontFamily = nameFontFamily,
-                    fontStyle = nameFontStyle
-                )
-
-
-                Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
-                Text(
-                    text = stringResource(address),
-                    color = addressColor,
-                    fontSize = spResource(R.dimen.detail_size)
-                )
-            }
 
         }
     }
