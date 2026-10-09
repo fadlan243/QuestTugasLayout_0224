@@ -6,15 +6,9 @@
     <string name="copyright">Copyright, 2026</string>
     <string name="cd_logo_umy">Logo Universitas Muhammadiyah Yogyakarta</string>
 
+    <string name="phone_gibran">085436874190</string>
 
-    <string name="address_bambang">Turi, Sleman</string>
+    <string name="phone_zhilal">085436874190</string>
 
-
-    <string name="address_gibran">Kasihan, Bantul</string>
-
-
-    <string name="address_zhilal">Depok, Sleman</string>
-
-
-    <string name="address_ahmad">Gamping, Sleman</string>
+    <string name="phone_ahmad">085436874190</string>
 </resources>
