@@ -79,6 +79,16 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 nameFontWeight = FontWeight.Normal
             )
 
+            // Kartu 2 – ungu
+            ProfileCard(
+                name = R.string.name_gibran,
+                phone = R.string.phone_gibran,
+                address = R.string.address_gibran,
+                containerColor = colorResource(R.color.card_purple),
+                nameColor = colorResource(R.color.text_white),
+                phoneColor = colorResource(R.color.text_cyan),
+                addressColor = colorResource(R.color.text_yellow)
+            )
 
     }
 }
