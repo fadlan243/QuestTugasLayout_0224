@@ -39,18 +39,32 @@ fun ProfileCard(
     nameFontStyle: FontStyle? = null,
     nameFontWeight: FontWeight = FontWeight.Bold
 ) {
- {
-            Image(
-                painter = painterResource(R.drawable.logo_umy),
-                contentDescription = stringResource(R.string.cd_logo_umy),
-                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
-            )
 
-            Image(
-                painter = painterResource(R.drawable.logo_umy),
-                contentDescription = stringResource(R.string.cd_logo_umy),
-                modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
-            )
+
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = dimensionResource(R.dimen.text_gap_horizontal)),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = stringResource(name),
+                    color = nameColor,
+                    fontSize = spResource(R.dimen.name_size),
+                    fontWeight = nameFontWeight,
+                    fontFamily = nameFontFamily,
+                    fontStyle = nameFontStyle
+                )
+
+
+                Spacer(Modifier.height(dimensionResource(R.dimen.text_gap_vertical)))
+                Text(
+                    text = stringResource(address),
+                    color = addressColor,
+                    fontSize = spResource(R.dimen.detail_size)
+                )
+            }
+
         }
     }
 }
